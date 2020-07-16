@@ -1,23 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+     <!-- 音乐播放器的头部 -->
+     <music-header></music-header>
+     <!-- tab -->
+     <tab></tab>
+     <!-- 页面 -->
+     <router-view></router-view>
+     <!-- 音乐播放器 -->
+     <player></player>
   </div>
 </template>
 
 <script>
+import MusicHeader from '@/components/musicheader'
+import Tab from '@/components/tabs'
+import  Player from '@/components/player'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    MusicHeader,
+     Tab,
+     Player
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ <style lang="less" >
+   @import '~@/common/less/index.less';
 </style>
+
+
+
+
